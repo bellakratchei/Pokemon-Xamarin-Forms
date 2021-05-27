@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PokemonPrism.Views.DetalhesPokemonPage"
+             Title="{Binding Pokemon.Nome}">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="Center">
+            <Label HorizontalTextAlignment="Start" Text="Número:"></Label>
+            <Entry Text="{Binding Pokemon.Numero}" IsEnabled="False"></Entry>
+            <Label HorizontalTextAlignment="Start" Text="Nome:"></Label>
+            <Entry Text="{Binding Pokemon.Nome}" IsEnabled="False">></Entry>
+            <Label HorizontalTextAlignment="Start" Text="Observações:"></Label>
+            <Editor Text="{Binding Pokemon.Observacoes}" IsEnabled="False">></Editor>
+            <Label Text="É primeira fase?"></Label>
+            <Switch IsToggled="{Binding Pokemon.IsPrimeiraFase}" HorizontalOptions="Start" HeightRequest="50" IsEnabled="False">></Switch>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

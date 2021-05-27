@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="PokemonPrism.Views.HelloPrismPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="Center">
+            <Label Text="{Binding Texto}" HorizontalTextAlignment="Center"></Label>
+            <Label Text="Digite seu nome:"></Label>
+            <Entry Text="{Binding Nome}"></Entry>
+            <Button Text="Enviar!" Command="{Binding EnviarCommand}"></Button>
+            <Label Text="{Binding Mensagem}" HorizontalTextAlignment="Center" FontSize="14" HeightRequest="50"></Label>
+            <Button Text="Ir para outra página" Command="{Binding IrParaOutraPaginaCommand}"></Button>
+            <Label Text="Primeira Geração?"></Label>
+            <Switch HorizontalOptions="Start"></Switch>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
